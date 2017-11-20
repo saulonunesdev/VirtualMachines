@@ -22,17 +22,13 @@ vagrant up
 * [Oracle VM VirtualBox](https://www.virtualbox.org/) - Virtual Machines Virtualization
 * [GIT](https://github.com/) - Versioning
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/SauloNunes/VirtualMachines/tags). 
 
 ## Authors
 
-* **Saulo Nunes** - *Initial work* - [PurpleBooth](https://github.com/Saulo Nunes)
+* **Saulo Nunes** - *Initial work* - [Saulo Nunes](https://github.com/SauloNunes)
 
 See also the list of [contributors](https://github.com/SauloNunes/VirtualMachines/contributors) who participated in this project.
 
