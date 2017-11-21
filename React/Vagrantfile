@@ -17,6 +17,10 @@ Vagrant.configure("2") do |config|
 	v.gui = false  
     v.memory = 2048
 	v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+	#Use $VBoxManage list usbhost
+	#To list Usb Ports and Get Your Device VENDORID and PRODUCTID then Uncomment the lines below
+    v.customize ["modifyvm", :id, "--usb", "on"]
+    v.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'ESP', '--vendorid', '0x22b8', '--productid', '0x2e76']
   end
   
   config.vm.provision :shell, path: "provision.sh"
