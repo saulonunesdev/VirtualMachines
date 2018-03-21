@@ -23,6 +23,7 @@ choco install filezilla -y
 choco install notepadplusplus.install -y
 choco install visualstudiocode -y
 choco install atom -y
+choco install sourcetree -y
 
 #Change VirtualBox VIRTUALMACHINES Directory !Need To Close/Open Windows PowerShell As Administrator!
 D:
