@@ -87,3 +87,10 @@ avdmanager create avd -n Marsh23 -k "system-images;android-23;google_apis;x86_64
 
 emulator -list-avds
 emulator -avd Marsh23
+
+#VSCODE PLUGINS
+choco install plantuml -y
+code --install-extension jebbs.plantuml
+code --install-extension vsmobile.vscode-react-native
+code --install-extension bierner.markdown-preview-github-styles
+code --install-extension liximomo.sftp

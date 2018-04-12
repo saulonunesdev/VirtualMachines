@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  #PRIVATE BOX WINDOWS 7 / DELPHI 7 / FIREBIRD 2.5
-  config.vm.box = "WIN764"
+  #PRIVATE BOX WINDOWS 7 / DELPHI BERLIN / ACBR
+  config.vm.box = "DELPHIBERLIN"
 
   config.ssh.insert_key = false
   
