@@ -1,0 +1,18 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/trusty64"
+
+  config.ssh.insert_key = false
+
+  config.vm.network "private_network", ip: "192.168.56.6"
+  config.vm.network :forwarded_port, guest: 3306, host: 3306 #Mysql
+   
+  config.vm.synced_folder '.', '/vagrant', disabled: true
+  config.vm.synced_folder "app/", "/var/www"
+  
+  config.vm.provider "virtualbox" do |v|
+	v.name = "DATABASE"
+	v.gui = false  
+    v.memory = 2048
+  end
+  config.vm.provision :shell, path: "bootstrap.sh"
+end
