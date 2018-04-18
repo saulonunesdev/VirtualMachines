@@ -4,6 +4,9 @@
 /Delphi7/.vagrant
 /DelphiBerlin/.vagrant
 /DelphiTokyo/.vagrant
+/Lamp-Container/backup/.vagrant
+/Lamp-Container/database/.vagrant
+/Lamp-Container/web/.vagrant
 # Other files and folders
 
 # Executables

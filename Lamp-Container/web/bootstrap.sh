@@ -15,3 +15,5 @@ sudo apt-get install php7.0-fpm php7.0-mysql php7.0-common php7.0-gd php7.0-json
 #Configuration
 sudo a2enmod php7.0
 sudo service apache2 restart
+
+rm /var/www/html/index.html

@@ -90,6 +90,7 @@ emulator -avd Marsh23
 
 #VSCODE PLUGINS
 choco install plantuml -y
+code --install-extension dkundel.vscode-new-file
 code --install-extension jebbs.plantuml
 code --install-extension vsmobile.vscode-react-native
 code --install-extension bierner.markdown-preview-github-styles
