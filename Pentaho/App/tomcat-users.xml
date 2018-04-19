@@ -1,0 +1,3 @@
+<tomcat-users>
+    <user username="pentaho" password="pentaho" roles="manager-gui,admin-gui"/>
+</tomcat-users>

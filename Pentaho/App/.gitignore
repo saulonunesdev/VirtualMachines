@@ -1,0 +1,6 @@
+# Ignore everything in this directory
+*
+# Except this file
+!tomcat.conf
+!tomcat-users.xml
+!.gitignore
