@@ -1,26 +1,17 @@
 #Instructions Install PENTAHO 8.0    -> https://help.pentaho.com/Documentation/8.0/Setup/Installation/Manual/Linux_Environment
 #Instruction Install TOMCAT   8.0.51 -> https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-14-04
-#Check Linux Version                 ->$ lsb_release -irc
-#Check Directory in Linux            ->$ pwd
-#Check User Logged                   ->$ whoami
-#User: pentaho Password: pentaho
+#Download Files: https://sourceforge.net/projects/pentaho/files/
+#PentahoLogin: admin password
 
 #Update BM
 echo "Update Virtual Machine"
 sudo apt-get update
 sudo apt-get upgrade -y
+sudo apt-get install unzip -y
 
-#Create User Pentaho -s Users Shell -g Users Group -m Create Home Directory
-echo "Create User Pentaho -s Users Shell -g Users Group -m Create Home Directory"
-sudo useradd pentaho -s /bin/bash -g sudo -m
-echo "pentaho:pentaho" | sudo chpasswd
-
-#Change Logged User
-echo "Change Logged User"
-sudo su pentaho
 cd ~
-mkdir -p server/pentaho-server
-mkdir -p .pentaho
+sudo mkdir /home/vagrant/server
+sudo mkdir /home/vagrant/.pentaho
 
 #Install JAVA 8
 echo "Installing JAVA8"
@@ -77,17 +68,11 @@ sudo /etc/init.d/mysql restart
 
 #Installation PENTAHO
 echo "Installing PENTAHO"
-cd ~
-cd pentaho
-#PENTAHO-SERVER-CE
-#sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/server/pentaho-server-ce-8.0.0.0-28.zip/download
-#PDI-CE
-#sudo wget https://sourceforge.net/projects/pentaho/files/latest/download?source=files
-#PRD-CE
-#sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/prd-ce-8.0.0.0-28.zip/download
-#PAD-CE
-#sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/pad-ce-8.0.0.0-28.zip/download
-#PSW-CE
-#sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/psw-ce-8.0.0.0-28.zip/download
-#PME-CE
-#sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/pme-ce-8.0.0.0-28.zip/download
+cd /var/www/
+#if you want to download manually send the zip file to APP Folder and Comment the line below
+sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/server/pentaho-server-ce-8.0.0.0-28.zip
+sudo unzip /var/www/pentaho-server-ce-8.0.0.0-28.zip -d /home/vagrant/server
+cd /home/vagrant/server/pentaho-server
+sudo ./set-pentaho-env.sh
+sudo ./start-pentaho.sh
+echo "Installation Complete - Wait ~3 min before prompt http://localhost:8080/

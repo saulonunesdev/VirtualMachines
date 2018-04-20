@@ -48,6 +48,8 @@ choco install -y nodejs.install python2 jdk8 -y
 #Install Reach Native !Need To Close/Open Windows PowerShell!
 npm install -g react-native-cli
 npm install -g gulp-cli
+#http-server -p 8080
+npm install -g http-server
 
 #Install Bower - https://bower.io/
 npm install -g bower
