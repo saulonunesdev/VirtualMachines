@@ -8,6 +8,8 @@
 /Lamp-Container/database/.vagrant
 /Lamp-Container/web/.vagrant
 /Pentaho/.vagrant
+/MEMCACHE/.vagrant
+/Zammad/.vagrant
 # Other files and folders
 
 # Executables
