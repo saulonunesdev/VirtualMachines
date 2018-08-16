@@ -1,6 +1,6 @@
-# LAMP Container
+# Vagrant LAMP Container
 
-A Linux Apache Mysql Container Exercise
+A Linux Apache Mysql Vagrant Container - LAMP
 
 ### Prerequisites
 

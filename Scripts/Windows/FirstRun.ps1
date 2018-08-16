@@ -50,7 +50,6 @@ npm install -g react-native-cli
 npm install -g gulp-cli
 #http-server -p 8080
 npm install -g http-server
-
 #Install Bower - https://bower.io/
 npm install -g bower
 
@@ -81,6 +80,7 @@ tools\bin\sdkmanager.bat --list
 
 #SDKMANAGER Manual Installation Of Packages Google APIs | Android SDK Platform 23 | Intel x86 Atom_64 System Image | Google APIs Intel x86 Atom_64 System Image
 sdkmanager "add-ons;addon-google_apis-google-23" "platforms;android-23" "system-images;android-23;default;x86_64" "system-images;android-23;google_apis;x86_64" "extras;intel;Hardware_Accelerated_Execution_Manager"
+
 C:\Android\android-sdk\extras\intel\Hardware_Accelerated_Execution_Manager\intelhaxm-android.exe
 
 
@@ -88,7 +88,7 @@ C:\Android\android-sdk\extras\intel\Hardware_Accelerated_Execution_Manager\intel
 avdmanager create avd -n Marsh23 -k "system-images;android-23;google_apis;x86_64"
 
 emulator -list-avds
-emulator -avd Marsh23
+#emulator -avd Marsh23
 
 #VSCODE PLUGINS
 choco install plantuml -y
@@ -97,3 +97,6 @@ code --install-extension jebbs.plantuml
 code --install-extension vsmobile.vscode-react-native
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension liximomo.sftp
+
+#
+choco install yarn -y

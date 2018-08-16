@@ -25,5 +25,3 @@ sudo make install
 echo "Install Packages"
 sudo npm install -g gulp-cli
 sudo npm install -g yarn
-sudo npm install -g react-native-cli
-sudo npm install -g flow-bin

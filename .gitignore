@@ -10,6 +10,8 @@
 /Pentaho/.vagrant
 /MEMCACHE/.vagrant
 /Zammad/.vagrant
+/DNginx/.vagrant
+/Node/.vagrant
 # Other files and folders
 
 # Executables

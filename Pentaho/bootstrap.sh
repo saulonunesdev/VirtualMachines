@@ -10,8 +10,9 @@ sudo apt-get upgrade -y
 sudo apt-get install unzip -y
 
 cd ~
-sudo mkdir /home/vagrant/server
-sudo mkdir /home/vagrant/.pentaho
+sudo mkdir /opt/pentaho8051ee
+#sudo mkdir /home/vagrant/server
+#sudo mkdir /home/vagrant/.pentaho
 
 #Install JAVA 8
 echo "Installing JAVA8"
@@ -71,8 +72,8 @@ echo "Installing PENTAHO"
 cd /var/www/
 #if you want to download manually send the zip file to APP Folder and Comment the line below
 sudo wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/server/pentaho-server-ce-8.0.0.0-28.zip
-sudo unzip /var/www/pentaho-server-ce-8.0.0.0-28.zip -d /home/vagrant/server
-cd /home/vagrant/server/pentaho-server
+sudo unzip /var/www/pentaho-server-ce-8.0.0.0-28.zip -d /opt/pentaho8051ee
+cd /opt/pentaho8051ee/pentaho-server
 sudo ./set-pentaho-env.sh
 sudo ./start-pentaho.sh
 echo "Installation Complete - Wait ~3 min before prompt http://localhost:8080/

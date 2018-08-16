@@ -1,27 +1,29 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   
-  config.vm.network "private_network", ip: "192.168.56.4"
+  config.vm.network "private_network", ip: "192.168.56.5"
   
-  config.vm.network :forwarded_port, guest: 3000, host: 3000
-  config.vm.network :forwarded_port, guest: 80, host: 8080
-  config.vm.network :forwarded_port, guest: 8081, host: 8081  
-  
-  #config.ssh.forward_agent = true
+  #config.vm.network :forwarded_port, guest: 3000, host: 3000
+  #config.vm.network :forwarded_port, guest: 80, host: 8080
+  #config.vm.network :forwarded_port, guest: 8081, host: 8081  
   
   config.vm.synced_folder '.', '/vagrant', disabled: true
-  config.vm.synced_folder "app/", "/var/www/project"
+  config.vm.synced_folder "app/", "/var/www"
   
   config.vm.provider "virtualbox" do |v|
-	v.name = "REACT"
+	v.name = "REACTNV"
 	v.gui = false  
-    v.memory = 2048
-	v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
-	#Use $VBoxManage list usbhost
-	#To list Usb Ports and Get Your Device VENDORID and PRODUCTID then Uncomment the lines below
+    v.memory = 8192
+	
+	#Enable SymLink 
+	v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
+	
+	#To list Usb Ports and Get Your Device VENDORID and PRODUCTID then Use -> $VBoxManage list usbhost
     v.customize ["modifyvm", :id, "--usb", "on"]
-    v.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'ESP', '--vendorid', '0x22b8', '--productid', '0x2e76']
+    v.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'ESP', '--vendorid', '0x22b8', '--productid', '0x2e76']	
   end
   
-  #config.vm.provision :shell, path: "provision.sh"
+  config.vm.provision :shell, path: "provision.sh"
+  config.vm.provision :shell, path: "java.sh"
+  config.vm.provision :shell, path: "androidsdk.sh"
 end
