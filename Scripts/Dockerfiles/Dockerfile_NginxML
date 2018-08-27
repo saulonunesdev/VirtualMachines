@@ -1,62 +1,40 @@
 FROM ubuntu
 
-#Version 1.0
-MAINTAINER SauloNunesDev
+RUN apt-get update && apt-get install -y \
+    g++ \
+    git \
+    libxml2-dev \
+    libxslt-dev \
+    wget \
+    make \
+    && rm -rf /var/lib/apt/lists/*
 
-#echo "Installing Dependencies"
-RUN apt-get update
-RUN apt-get install -y g++
-RUN apt-get install -y git
-RUN apt-get install -y libxml2-dev
-RUN apt-get install -y libxslt-dev
-RUN apt-get install -y wget
-RUN apt-get install -y make
-
-#echo "Download Nginx Dependencies"
 RUN mkdir Projetos
 WORKDIR /Projetos/
 
-RUN wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.42.tar.gz && tar -zxf pcre-8.42.tar.gz
-RUN wget http://zlib.net/zlib-1.2.11.tar.gz && tar -zxf zlib-1.2.11.tar.gz
-RUN wget http://www.openssl.org/source/openssl-1.0.2o.tar.gz && tar -zxf openssl-1.0.2o.tar.gz
-RUN wget https://nginx.org/download/nginx-1.14.0.tar.gz && tar zxf nginx-1.14.0.tar.gz
-RUN git clone https://github.com/jcu-eresearch/nginx-custom-build.git
+RUN wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.42.tar.gz && tar -zxf pcre-8.42.tar.gz \
+    && wget http://zlib.net/zlib-1.2.11.tar.gz && tar -zxf zlib-1.2.11.tar.gz \
+    && wget http://www.openssl.org/source/openssl-1.0.2o.tar.gz && tar -zxf openssl-1.0.2o.tar.gz \
+    && wget https://nginx.org/download/nginx-1.14.0.tar.gz && tar zxf nginx-1.14.0.tar.gz \
+    && git clone https://github.com/jcu-eresearch/nginx-custom-build.git 
 
-#echo "Install PCRE"
 WORKDIR /Projetos/pcre-8.42/
-RUN ./configure
-RUN make
-RUN make install
+RUN ./configure \
+   && make \
+   && make install
 
-#echo "Install ZLIB"
 WORKDIR /Projetos/zlib-1.2.11/
-RUN ./configure
-RUN make
-RUN make install
+RUN ./configure \
+    && make \
+    && make install
 
-#echo "Apply PATCH"
 WORKDIR /Projetos/nginx-1.14.0/
 RUN patch -p1 < ../nginx-custom-build/nginx-xslt-html-parser.patch
 
-#echo "Configure ANd Install Nginx"
-RUN ./configure --with-pcre --with-http_xslt_module --with-http_ssl_module --with-openssl=../openssl-1.0.2o/
-RUN make
-RUN make install
+RUN ./configure --with-pcre --with-http_xslt_module --with-http_ssl_module --with-openssl=../openssl-1.0.2o/ \
+    && make \
+    && make install
 
-#echo "Clear Installation"
-WORKDIR /Projetos/
-RUN rm -rf *.tar.gz
-RUN rm -rf nginx-1.14.0/
-RUN rm -rf nginx-custom-build/
-RUN rm -rf openssl-1.0.2o/
-RUN rm -rf pcre-8.42/
-RUN rm -rf zlib-1.2.11/
+RUN rm -rf /Projetos/*
 
-#echo "Start Nginx"
 ENV PATH /usr/local/nginx/sbin/:$PATH
-#CMD ["nginx", "-g", "daemon off;"]
-
-EXPOSE 80
-EXPOSE 443
-
-#echo "So Far So Good!"
