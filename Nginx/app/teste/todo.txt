@@ -1,6 +1,0 @@
-sudo docker run --name srvmegaloja -itd -p 443:443 ubuntu:14.04
-
-
-sudo docker run --name srvmegaloja -itd -p 443:443 -v /estoque-estendido /Projetos/estoque-estendido/ ubuntu:14.04
-
- sudo docker container start srvmegaloja
