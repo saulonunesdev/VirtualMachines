@@ -35,6 +35,8 @@ RUN ./configure --with-pcre --with-http_xslt_module --with-http_ssl_module --wit
     && make \
     && make install
 
+WORKDIR /Projetos/	
+	
 RUN rm -rf /Projetos/*
 
 ENV PATH /usr/local/nginx/sbin/:$PATH

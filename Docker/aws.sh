@@ -19,7 +19,7 @@ wget https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd6
 sudo rm -rf terraform_0.11.7_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 
-echo "Copy Keys AWS CENTAURO && Check User"
+echo "Copy Keys AWS && Check User"
 cp -R /Projetos/keys/aws/ /home/vagrant/.aws/
 #aws iam get-user
 

@@ -1,0 +1,24 @@
+Vagrant.configure("2") do |config|
+  #PRIVATE BOX WINDOWS 7 / DELPHI BERLIN / ACBR
+  config.vm.box = "Microsoft/EdgeOnWindows10"
+  config.vm.box_version = "1.0"
+  
+  config.ssh.insert_key = false
+  config.vm.network "private_network", ip: "192.168.56.15"
+ 
+  config.vm.synced_folder '.', '/vagrant', disabled: true
+  config.vm.synced_folder "app/", "/app"
+  
+  config.vm.provider "virtualbox" do |v|
+	v.name = "DELPHISTARTER"
+	v.gui = false  
+    v.memory = 8192
+	v.cpus = 2
+  end
+
+end
+
+#PC NAME  = DELPHISTARTER
+#LOGIN    = IEUser
+#Password = Passw0rd!
+#(Run As Administrator) => slmgr /rearm 
