@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
   config.vm.network "private_network", ip: "192.168.56.7"
   
-  config.vm.network :forwarded_port, guest: 22, host: 1234
+  #config.vm.network :forwarded_port, guest: 22, host: 1234
   
   #config.ssh.forward_agent = true
   
@@ -16,7 +16,10 @@ Vagrant.configure("2") do |config|
 	v.name = "DELPHIBERLIN"
 	v.gui = false  
     v.memory = 8192
+	v.cpus = 2
 	v.customize ["modifyvm", :id, "--vram", "256"]
+	#--nictype<1-N> Am79C970A|Am79C973|82540EM|82543GC|82545EM|virtio
+	v.default_nic_type = "82540EM"	
   end
 
 end

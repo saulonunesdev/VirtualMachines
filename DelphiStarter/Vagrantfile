@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
-  #PRIVATE BOX WINDOWS 7 / DELPHI BERLIN / ACBR
-  config.vm.box = "Microsoft/EdgeOnWindows10"
-  config.vm.box_version = "1.0"
+  #PRIVATE BOX WINDOWS 10 (Microsoft/EdgeOnWindows10) / DELPHI CE / ACBR / REST DATAWARE
+  config.vm.box = "DELPHISTARTER"
+  #config.vm.box_version = "1.0"
   
   config.ssh.insert_key = false
   config.vm.network "private_network", ip: "192.168.56.15"
@@ -14,11 +14,13 @@ Vagrant.configure("2") do |config|
 	v.gui = false  
     v.memory = 8192
 	v.cpus = 2
+	#--nictype<1-N> Am79C970A|Am79C973|82540EM|82543GC|82545EM|virtio
+	v.default_nic_type = "82540EM"
   end
 
 end
 
 #PC NAME  = DELPHISTARTER
-#LOGIN    = IEUser
+#LOGIN    = DELPHISTARTER\IEUser
 #Password = Passw0rd!
 #(Run As Administrator) => slmgr /rearm 

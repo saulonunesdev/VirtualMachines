@@ -21,3 +21,6 @@ Get-ChildItem Env:
 refreshenv
 Get-ChildItem Env:
 #Get-ChildItem Env:VAGRANT_HOME
+
+
+vagrant plugin install vagrant-vbguest
