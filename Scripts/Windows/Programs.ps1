@@ -7,6 +7,7 @@ choco install steam -y
 choco install foxitreader -y
 choco install discord -y
 choco install geforce-experience -y
+
 #Programs DEV
 choco install git.install -y
 #Choose Your Favorite Editor or Install All of Them
