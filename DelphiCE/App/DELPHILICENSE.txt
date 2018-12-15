@@ -1,0 +1,13 @@
+Product: Delphi 10.3 Community Edition 
+
+Serial Number(s): 4UCK-GYNGXB-4VQLBF-3BZD 
+
+Login Name: o3048991@nwytg.net 
+
+First Name: vagrant 
+
+Last Name: vagrant 
+
+If you havent already downloaded the software or need to download again, click the link below: 
+Delphi 10.3 Rio 
+http://altd.embarcadero.com/download/radstudio/10.3/radstudio10_3_0_esd_94364.exe

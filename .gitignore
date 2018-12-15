@@ -1,10 +1,7 @@
 # Build and Release Folders
 /React/.vagrant
 /Lamp/.vagrant
-/Delphi7/.vagrant
-/DelphiBerlin/.vagrant
-/DelphiStarter/.vagrant
-/DelphiTokyo/.vagrant
+/DelphiCE/.vagrant
 /Lamp-Container/backup/.vagrant
 /Lamp-Container/database/.vagrant
 /Lamp-Container/web/.vagrant

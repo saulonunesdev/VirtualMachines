@@ -1,0 +1,14 @@
+Delphi Rio CE
+FortesReport Community Edition - https://github.com/fortesinformatica/fortesreport-ce
+Acbr                           - LIBD26 REVISAO 16087- https://www.projetoacbr.com.br/
+Rest Dataware                  - D24 https://www.restdw.com.br/
+EMULADOR SAT SP
+-
+CHOCOLATEY
+GIT
+CHROME
+WINRAR
+JAVA8
+TORTOISE SVN
+NOTEPAD++
+FOXITPDF

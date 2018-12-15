@@ -1,0 +1,7 @@
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+!DELPHILICENSE.txt
+!DelphiScript.ps1
+!Instalados.txt
