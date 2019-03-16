@@ -7,7 +7,8 @@ choco install steam -y
 choco install foxitreader -y
 choco install discord -y
 choco install geforce-experience -y
-
+choco install toggl -y
+choco install exercism-io-cli -y
 #Programs DEV
 choco install git.install -y
 #Choose Your Favorite Editor or Install All of Them
@@ -32,3 +33,9 @@ choco install putty -y
 #VSCODE PLUGINS
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension peterjausovec.vscode-docker
+code --install-extension alefragnani.Bookmarks
+
+#MD PREVIEW
+code --install-extension shd101wyy.markdown-preview-enhanced
+#MD TO PDF
+code --install-extension qinjia.md2pdf
