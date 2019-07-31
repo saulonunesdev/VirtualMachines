@@ -31,11 +31,9 @@ choco install putty -y
 #choco install atom -y
 
 #VSCODE PLUGINS
-code --install-extension bierner.markdown-preview-github-styles
 code --install-extension peterjausovec.vscode-docker
 code --install-extension alefragnani.Bookmarks
-
 #MD PREVIEW
-code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension bierner.markdown-preview-github-styles
 #MD TO PDF
 code --install-extension qinjia.md2pdf
