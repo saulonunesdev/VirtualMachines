@@ -31,9 +31,32 @@ choco install putty -y
 #choco install atom -y
 
 #VSCODE PLUGINS
+#BROWSER SIDE PREVIEW
+code --install-extension auchenberg.vscode-browser-preview
 code --install-extension peterjausovec.vscode-docker
 code --install-extension alefragnani.Bookmarks
 #MD PREVIEW
 code --install-extension bierner.markdown-preview-github-styles
 #MD TO PDF
 code --install-extension qinjia.md2pdf
+
+#Marco Bruno VSCode Plugins List
+code --install-extension steoates.autoimport
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension kamikillerto.vscode-colorize
+code --install-extension ritwickdey.create-file-folder
+code --install-extension gerane.Theme-Dark-Dracula
+code --install-extension mikestead.dotenv
+code --install-extension dracula-theme.theme-dracula
+code --install-extension luongnd.edge
+code --install-extension EditorConfig.EditorConfig
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension GrapeCity.gc-excelviewer
+code --install-extension Prisma.vscode-graphql
+code --install-extension dakshmiglani.hex-to-rgba
+code --install-extension PKief.material-icon-theme
+code --install-extension ronnidc.nunjucks
+code --install-extension esbenp.prettier-vscode
+code --install-extension TimonVS.ReactSnippetsStandard
+code --install-extension MS-vsliveshare.vsliveshare
+code --install-extension jpoissonnier.vscode-styled-components
