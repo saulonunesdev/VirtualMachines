@@ -1,0 +1,48 @@
+{
+  "[css]": {
+    "editor.fontLigatures": false
+  },
+  "editor.fontLigatures": true,
+  // Configura tamanho e família da fonte
+  "editor.fontSize": 14,
+  "editor.lineHeight": 16,
+  "editor.rulers": [80, 120],
+  // Aplica um sinal visual na esquerda da linha selecionada
+  "editor.renderLineHighlight": "gutter",
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true,
+  "editor.tabSize": 2,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "javascript.validate.enable": false,
+  "files.associations": {
+    ".babelrc": "json5",
+    "*.html": "html",
+    "*.js": "javascript"
+  },
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnPaste": true,
+  "javascript.format.enable": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "breadcrumbs.enabled": true,
+  "workbench.activityBar.visible": true,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+  "explorer.confirmDelete": false,
+  "window.zoomLevel": 0,
+  "terminal.integrated.rendererType": "dom",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "browser-preview.startUrl": "https://localhost",
+  "workbench.colorTheme": "Dark-Dracula",
+  "docker.host": "tcp://192.168.99.101:2376",
+  "docker.attachShellCommand.windowsContainer": "wsl bash",
+  "docker.certPath": "C:\\Users\\saulo\\.docker\\machine\\machines\\docker-host",
+  "docker.machineName": "docker-host"
+}
