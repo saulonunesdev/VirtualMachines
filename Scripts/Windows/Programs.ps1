@@ -62,3 +62,5 @@ code --install-extension MS-vsliveshare.vsliveshare
 code --install-extension jpoissonnier.vscode-styled-components
 code --install-extension icrawl.discord-vscode
 code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension chenxsan.vscode-standardjs
+code --install-extension ms-vscode-remote.remote-ssh-nightly
